@@ -22,9 +22,9 @@ A high-performance FastAPI service that delivers AI-powered market analysis and 
 **1. Prerequisites
 Before you begin, ensure you have the following installed:**
 
-Python 3.8+
+- Python 3.8+
 
-pip (Python package installer)
+- pip (Python package installer)
 
 **2. Install Dependencies
 It is highly recommended to use a virtual environment to manage dependencies for this project.**
@@ -49,75 +49,80 @@ pip install fastapi uvicorn httpx
 
 **3. Obtain a Google Gemini API Key**
 
-The application requires a Gemini API key to perform market analysis.
+- The application requires a Gemini API key to perform market analysis.
 
-Go to the Google AI Studio: https://aistudio.google.com/
+- Go to the Google AI Studio: https://aistudio.google.com/
 
-Create or select a project.
+- Create or select a project.
 
-Navigate to "Get API key" and generate a new API key.
+- Navigate to "Get API key" and generate a new API key.
 
-Open the main.py file and locate the call_gemini_api function.
+- Open the main.py file and locate the call_gemini_api function.
 
-Replace "YOUR_GEMINI_API_KEY_HERE" with your actual key:
+- Replace "YOUR_GEMINI_API_KEY_HERE" with your actual key:
 
-api_key = "YOUR_GEMINI_API_KEY_HERE"
+- api_key = "YOUR_GEMINI_API_KEY_HERE"
 
-4. Run the Application
-Execute the FastAPI application using Uvicorn. The --reload flag is great for development as it automatically restarts the server on code changes.
+**4. Run the Application**
 
+- Execute the FastAPI application using Uvicorn. The --reload flag is great for development as it automatically restarts the server on code changes.
+
+``` sh
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
 
-The server will now be running at http://localhost:8000.
+- The server will now be running at http://localhost:8000.
 
-📖 API Usage
+## 📖 API Usage
 API Documentation
 The project includes an interactive API documentation page powered by Swagger UI.
 
-👉 View Docs: http://localhost:8000/docs
+**👉 View Docs: http://localhost:8000/docs**
 
 You can use this interface to test the endpoint directly.
 
-Making a Request
+- Making a Request
 To get a market analysis report, send a GET request to the /analyze/{sector} endpoint. You must include a valid API key in the Authorization header.
 
-API Keys
-Two example API keys are pre-configured for demonstration:
+**API Keys
+Two example API keys are pre-configured for demonstration:**
 
-mysecretapikey123 (for user test_user_1)
+- mysecretapikey123 (for user test_user_1)
 
-anothersecretkeyabc (for user analyst_beta)
+- anothersecretkeyabc (for user analyst_beta)
 
-Example Request using curl
+**Example Request using curl**
+``` sh
 curl -X 'GET' \
   'http://localhost:8000/analyze/pharmaceuticals' \
   -H 'accept: text/markdown' \
   -H 'Authorization: Bearer mysecretapikey123'
+```
 
-Note: The response will be a structured markdown report that you can save directly to a file (e.g., report.md).
+**Note: The response will be a structured markdown report that you can save directly to a file (e.g., report.md).**
 
-🔒 Security & Rate Limiting
-The API employs a simple API key authentication and rate-limiting system.
+## 🔒 Security & Rate Limiting
+**The API employs a simple API key authentication and rate-limiting system.**
 
-Rate Limit: 5 requests per minute (60 seconds) per authenticated user.
+- **Rate Limit:** 5 requests per minute (60 seconds) per authenticated user.
 
-Authentication: All requests must include a valid API key in the Authorization header.
+- **Authentication:** All requests must include a valid API key in the Authorization header.
 
-If you exceed the rate limit or provide an invalid key, you will receive an appropriate HTTP error response (429 Too Many Requests or 401 Unauthorized).
+#### **If you exceed the rate limit or provide an invalid key, you will receive an appropriate HTTP error response (429 Too Many Requests or 401 Unauthorized).**
 
-🎨 Future Enhancements
-This project can be expanded upon with the following improvements:
+## 🎨 Future Enhancements
+**This project can be expanded upon with the following improvements:**
 
-Real-time Data: Integrate with a live news or financial data API (e.g., NewsAPI, Alpha Vantage) for a more dynamic analysis.
+- **Real-time Data:** Integrate with a live news or financial data API (e.g., NewsAPI, Alpha Vantage) for a more dynamic analysis.
 
-Persistent Storage: Implement a database (like Redis or PostgreSQL) for long-term rate limiting, session management, and caching.
+- **Persistent Storage:** Implement a database (like Redis or PostgreSQL) for long-term rate limiting, session management, and caching.
 
-Advanced Security: Upgrade authentication to a more robust system like OAuth2 or JWT with proper token management.
+- **Advanced Security:** Upgrade authentication to a more robust system like OAuth2 or JWT with proper token management.
 
-New Endpoints: Add endpoints to allow users to save reports, view historical analyses, or get insights on custom data.
+- **New Endpoints:** Add endpoints to allow users to save reports, view historical analyses, or get insights on custom data.
 
-📝 Disclaimer
+## 📝 Disclaimer
 This API and its reports are generated by an AI model and should not be considered financial advice. Always conduct your own thorough research and consult with a professional before making any investment or trade decisions. The data used for analysis is simulated for this project's demonstration.
 
-📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
