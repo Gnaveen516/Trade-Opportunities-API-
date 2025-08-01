@@ -1,45 +1,54 @@
 # ✨ Trade Opportunities API ✨
 A high-performance FastAPI service that delivers AI-powered market analysis and trade opportunity insights for specific sectors in India. This project is designed to be a rapid-deployment tool for market analysts, investors, and business strategists.
 
-# 🚀 Key Features
-#### 📈 AI-Powered Insights: Utilizes the Google Gemini API to perform in-depth analysis of market data.
+-----
 
-#### 🌐 Dynamic Data Collection: Simulates real-time market news and trends for the specified sector.
+## 🚀 Key Features
+**📈 AI-Powered Insights: Utilizes the Google Gemini API to perform in-depth analysis of market data.**
 
-#### 📝 Structured Markdown Reports: Generates professional, human-readable reports that can be easily saved as .md files.
+**🌐 Dynamic Data Collection: Simulates real-time market news and trends for the specified sector.**
 
-#### 🔒 Robust Security: Implements API key authentication and rate limiting to prevent abuse and ensure fair usage.
+**📝 Structured Markdown Reports: Generates professional, human-readable reports that can be easily saved as .md files.**
 
-#### ⚡️ High Performance: Built on FastAPI's asynchronous framework for speed and efficiency.
+**🔒 Robust Security: Implements API key authentication and rate limiting to prevent abuse and ensure fair usage.**
 
-#### 📚 Self-Documenting: Comes with automatic interactive API documentation (Swagger UI/ReDoc).
+**⚡️ High Performance: Built on FastAPI's asynchronous framework for speed and efficiency.**
 
-#### 💾 In-Memory Storage: Keeps the service lightweight and stateless, with no external database dependencies.
+**📚 Self-Documenting: Comes with automatic interactive API documentation (Swagger UI/ReDoc).**
 
-# ⚙️ Setup & Installation
-#### 1. Prerequisites
-Before you begin, ensure you have the following installed:
+**💾 In-Memory Storage: Keeps the service lightweight and stateless, with no external database dependencies.**
+
+## ⚙️ Setup & Installation
+**1. Prerequisites
+Before you begin, ensure you have the following installed:**
 
 Python 3.8+
 
 pip (Python package installer)
 
-#### 2. Install Dependencies
-It is highly recommended to use a virtual environment to manage dependencies for this project.
+**2. Install Dependencies
+It is highly recommended to use a virtual environment to manage dependencies for this project.**
 
-# Create a virtual environment
+### Create a virtual environment
+``` sh
 python -m venv venv
-
-# Activate the virtual environment
+```
+### Activate the virtual environment
 ### On macOS and Linux:
+``` sh
 source venv/bin/activate
+```
 ### On Windows:
+``` sh
 venv\Scripts\activate
-
-# Install the required packages
+```
+### Install the required packages
+``` sh
 pip install fastapi uvicorn httpx
+```
 
-3. Obtain a Google Gemini API Key
+**3. Obtain a Google Gemini API Key**
+
 The application requires a Gemini API key to perform market analysis.
 
 Go to the Google AI Studio: https://aistudio.google.com/
