@@ -1,6 +1,6 @@
 # ✨ Trade Opportunities API ✨
 
-![Trade Opportunities API](https://wallpapers.com/images/hd/partially-solved-rubiks-cube-b569hae3wrxl3775.png)
+![Trade Opportunities API](https://wallpaperaccess.com/full/6227484.jpg)
 
 A high-performance FastAPI service that delivers AI-powered market analysis and trade opportunity insights for specific sectors in India. This project is designed to be a rapid-deployment tool for market analysts, investors, and business strategists.
 
