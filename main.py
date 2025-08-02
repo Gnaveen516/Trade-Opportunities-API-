@@ -101,7 +101,7 @@ async def call_gemini_api(prompt: str) -> str:
     chat_history = []
     chat_history.append({"role": "user", "parts": [{"text": prompt}]})
     payload = {"contents": chat_history}
-    api_key = "AIzaSyDE9uBarRXkqR6V1fvMfjouaeZAoGjXUWY"  # Canvas will provide this at runtime if empty, or you can hardcode your key
+    api_key = "YOUR_GEMINI_API_KEY_HERE"  
     api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key={api_key}"
 
     retries = 0
@@ -300,4 +300,5 @@ async def analyze_sector(
 # And make requests like:
 # curl -X GET "http://localhost:8000/analyze/pharmaceuticals" \
 #      -H "Authorization: Bearer mysecretapikey123" \
+
 #      -H "accept: text/markdown"
